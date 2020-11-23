@@ -352,5 +352,99 @@ Ejemplo:
 warWords("hola", "chau");
 warWords("love", "friendship"); */
 
+/* 15. Prefijos Telefónicos
+Utils:
+var prefijos = [54, 55, 56, 57, 58]
+var paises = ["argentina", "brasil", "chile", "colombia", "venezuela"]
+Debés crear una función llamada `validarPrefijo` que reciba un número por parámetro.
+Deberá:
+1. Generar un objeto desde dos arreglos dados. Deberá tener como propiedades,
+los números de prefijos, y como valor, el país correspondiente a cada prefijo.
+ejemplo :
+{
+    54: “Argentina”,
+    55: ”Brasil”,
+    56: ”Ecuador”,
+    57: ”Bolivia”
+}
+2. Validar si los dos primeros números del pasado por parámetro existen en el
+objeto de prefijos telefónicos. En caso de ser correcto, deberá retornar “Este
+número pertenece a X”.
+3. En caso de ser incorrecto deberá retornar “El número no pertenece a nuestros
+países”
+*/
 
+/* function validarPrefijo(numero){
+    let prefijos = [54,55,56,57,51,58,59];
+    let paises = ["Argentina", "Brasil", "Chile", "Colombia", "Peru", "Venezuela","Bolivia"];
+    let objeto = {};
+    for(let i=0; i<paises.length&&i<prefijos.length;i++){
+        objeto[paises[i]]= prefijos[i]      
+    }
+
+    for(let i in objeto){
+        if(numero === objeto[i]){
+            return `Este numero ${numero} pertenece a ${i}`;
+        }
+    }
+    return `este numero ${numero} no pertenece a a nuestros paises`
+}
+
+console.log(validarPrefijo(55));
+console.log(validarPrefijo(54));
+console.log(validarPrefijo(51));
+console.log(validarPrefijo(59));
+console.log(validarPrefijo(60)); */
+
+/* 16. {value: key} 
+Debés crear una función llamada `reverseKeys` que reciba un objeto como paŕámetro.
+Si ese paŕametro no es un objeto, deberá devolver un string que indique qué tipo de
+dato fue ingresado como input y por qué no es válido.
+Si el parámetro es un objeto, la función deberá devolver otro objeto. Deberá tener todas
+las propiedades que sean un string puestas como key y el value deberá ser el key
+anterior
+Ejemplo:
+- reverseKeys(344) debería devolver “error, input can’t be a number”
+- reverseKeys([ ]) debería devolver “error, input can’t be an Array”
+- reverseKeys(‘hola’) debería devolver “error, input can’t be a string”
+var prueba = {
+nombre: ‘santi’,
+edad: 22,
+nacionalidad: ‘de otro planeta’,
+documento: 44444444
+}
+- reverseKeys(prueba) debería devolver:
+{
+santi: ‘nombre’,
+edad: 22,
+‘’de otro planeta”: nacionalidad,
+documento: 44444444
+}
+ */
+
+/* function reverseKeys(objeto){
+    let objeto2 ={}; 
+    if(typeof(objeto) !== "object"){
+        return (`error, input can´t be a ${typeof(objeto)}`)
+    }else{
+        for(let i in objeto){
+            objeto2[objeto[i]] = i
+            //console.log(`${i} ${objeto[i]}`)
+        }
+    }
+    //console.log(objeto2)
+    for(let a in objeto2){
+        console.log(`${a} : ${objeto2[a]}`)
+    }
+    return objeto2;
+} 
+let objeto = {
+    nombre: "santi",
+    edad: 22,
+    nacionalidad: "de otro planeta",
+    documento: 44444444
+    }
+    
+// reverseKeys(objeto);
+console.log(reverseKeys(objeto)) */
 
