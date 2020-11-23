@@ -230,3 +230,31 @@ console.log(minSuma([7, 6, 5, 4, 3, 2]))
 console.log(minSuma([1, 10, 43, 900, 20, 8]))
 console.log(minSuma([2, 10, 43, 900, 20, 8]))
 console.log(minSuma([2,3,4,5,6,7])) */
+
+/* 11. Arreglo de objetos
+Debés crear una función llamada `arregloDeObjetos` que reciba un número como
+parámetro y devuelva un arreglo de objetos que tengan una propiedad llamada `valor`
+que contenga el valor del número y sus anteriores.
+Ejemplo:
+- arregloDeObjetos(5) debe retornar [{valor: 1}, {valor: 2}, {valor: 3}, {valor: 4},
+{valor: 5}]
+- arregloDeObjetos(3) debe retornar [{valor: 1}, {valor: 2}, {valor: 3}] */
+
+/* function arregloDeObjetos(numero){
+    let arreglo = []
+    for(let i=1; i<=numero;i++){
+        let objeto = {}
+        objeto["valor"] = i
+        arreglo.push(objeto);
+    }
+    for(let j=0; j<arreglo.length; j++){
+        console.log(arreglo[j]);
+     }
+}
+arregloDeObjetos(5);
+console.log(" ")
+arregloDeObjetos(3);
+ */
+
+
+
