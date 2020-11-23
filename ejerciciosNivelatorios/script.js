@@ -447,10 +447,19 @@ let objeto = {
     
 // reverseKeys(objeto);
 console.log(reverseKeys(objeto)) */
+
+/* 17. Palindromo
+Deben crear una función llamada “palíndromo” que indique si una palabra es
+palíndroma o no, debe retornar true en el caso que sea, y false en el caso que no.
+Definición de palíndromo aquí.
+Ejemplo:
+- palindromo(“anilina ”) debe retornar true
+- palindromo(“Ana ”) debe retornar true
+- palindromo(“Enrique”) debe retornar false */
 /* 
 function palindrome(string) {
     var mitad = Math.floor(string.length/2);
-    for ( var i = 0; i < mitad; i++ ) {
+    for ( let i = 0; i < mitad; i++ ) {
         if (string[i] !== string[string.length - 1 - i]) {
             return false;
         }
