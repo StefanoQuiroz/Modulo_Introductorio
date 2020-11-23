@@ -447,4 +447,17 @@ let objeto = {
     
 // reverseKeys(objeto);
 console.log(reverseKeys(objeto)) */
+/* 
+function palindrome(string) {
+    var mitad = Math.floor(string.length/2);
+    for ( var i = 0; i < mitad; i++ ) {
+        if (string[i] !== string[string.length - 1 - i]) {
+            return false;
+        }
+    }
+    return true;
+}
 
+console.log(palindrome("anilina"));
+console.log(palindrome("ana"));
+console.log(palindrome("Enrique")); */
