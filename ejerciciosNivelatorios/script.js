@@ -112,3 +112,35 @@ Ejemplo:
     }
 }
 console.log(middleCharacter("cosas")); */
+/* 7. Mover ceros a lo último
+Debés crear una función llamada `moveZeros` que reciba un arreglo como parámetro y
+devuelva otro con los números `0` ordenados al final.
+Ejemplo:
+- moveZeros([false,1,0,1,2,0,1,3,"a"]) debe retornar [false,1,1,2,1,3,"a",0,0]
+- moveZeros([1,2,0,1,0,1,0,3,0,1]) debe retornar [1,2,1,1,3,1,0,0,0,0]
+ */
+
+/* function moveZeros(arreglo){
+    let nuevoArreglo = []
+    for(let i=0; i<arreglo.length;i++){
+        if(arreglo[i]===0){
+            nuevoArreglo.push(arreglo[i])
+            arreglo.splice(arreglo.indexOf(arreglo[i]),1)
+            
+            //nuevoArreglo.push(arreglo[i])
+            //push(arreglo[i]);
+        }
+    }
+    for(let i=0; i< nuevoArreglo.length; i++){
+        arreglo.push(nuevoArreglo[i]);
+    }
+    return arreglo;
+    
+}
+let arreglo = [1,2,0,1,0,1,0,3,0,1]
+let arreglo2= [false,1,0,1,2,0,1,3,"a"]
+console.log(moveZeros(arreglo));
+console.log(moveZeros(arreglo2)); */
+
+
+
