@@ -142,5 +142,91 @@ let arreglo2= [false,1,0,1,2,0,1,3,"a"]
 console.log(moveZeros(arreglo));
 console.log(moveZeros(arreglo2)); */
 
+/* 8. Manejando dos arreglos
+Debés crear una función llamada `arrayHandler` que reciba dos arreglos de igual largo
+como parámetros y muestre en la consola “Soy {elemento de array 1} y yo soy
+{elemento de array 2}”.
+Ejemplo:
+- arrayHandler([1,2,3,4], [“h”,”o”,”l”,”a”]) debe mostrar:
+Soy 1 y yo soy h
+Soy 2 y yo soy o
+Soy 3 y yo soy l
+Soy 4 y yo soy a
+ */
 
+/* function arrayHandler(arreglo1, arreglo2){
+    if(arreglo1.length === arreglo2.length){
+        for (let i=0; i<arreglo1.length;i++){
+            console.log(`Soy ${arreglo1[i]} y yo soy ${arreglo2[i]}`)
+        }
+    }
+    else {
+        alert(`${arreglo1} no es del mismo tamanio de ${arreglo2}`)
+    }
+}
+arrayHandler([1,2,3,4], ["h","o","l","a"]);
+//Prueba diferentes tamanios arreglo1 y arreglo2, alert
+//arrayHandler([1,2,3,4], ["h","o","l"]); */
 
+/* 9. Mezclando arreglos I
+Debés crear una función llamada `mezclarArreglos` que reciba dos arreglos como
+parámetros y devuelva uno nuevo con los elementos de ambos, de 1 en 1.
+Ejemplo:
+- mezclarArreglos([1,2,3,4],[“h”,”o”,”l”,”a”]) debe retornar [1, “h”, 2,”o”, 3,”l”,4,”a”]
+- mezclarArreglos([1,2,3,4], [“h”,”p”]) debe retornar [1, “h”, 2, “p”, 3 , 4]
+- mezclarArreglos([“h”,”p”], [1,2,3,4]) debe retornar [“h”, 1, “p”, 2, 3 , 4] */
+
+/* 10. Mínima Suma
+Debés crear una función llamada `minSum` que reciba un arreglo de números
+desordenados y devuelva la suma entre los dos números más chicos.
+Ejemplo:
+- minSum([7, 6, 5, 4, 3, 2, 1]) debe retornar 3 (2 + 1)
+- minSum([1, 10, 43, 900, 20, 8]) debe retornar 9 */
+
+/* function minSum(arreglo){
+    //dar valores altos al azar a min y min2
+    let min = 1000
+    //arreglo[0];
+    let nuevoArreglo = [];
+    let min2 = 1000
+    //arreglo[0];
+    for(let i=0; i<arreglo.length; i++){
+        if(min > arreglo[i]){
+            min=arreglo[i];
+        }
+    }    
+    for(let i=0; i<arreglo.length; i++){
+        if(arreglo[i]>min && min2>arreglo[i]){
+            min2=arreglo[i];
+        }
+    }
+    return min + min2;
+}
+console.log(minSum([7, 6, 5, 4, 3, 2]))
+console.log(minSum([1, 10, 43, 900, 20, 8]))
+console.log(minSum([2, 10, 43, 900, 20, 8]))
+console.log(minSum([2,3,4,5,6,7])) */
+//Otra forma con algoritmo de ordenacion bubble sort, mas avanzado
+/* function minSuma (arreglo){
+    const tamanio = arreglo.length - 1;
+    for(let i=0; i<tamanio;i++){
+        for(let j=0; j<(tamanio-i); j++){
+            if(arreglo[j]>arreglo[j+1]){
+                const temp = arreglo[j];
+                arreglo[j]=arreglo[j+1];
+                arreglo[j+1]=temp;
+            }
+        }
+    }
+    let sumaMinima = 0;
+    for(let i=0; i<2;i++){
+        sumaMinima += arreglo[i];
+    }
+    return sumaMinima;
+}
+
+console.log(minSuma([1, 10, 43, 900, 20, 8]))
+console.log(minSuma([7, 6, 5, 4, 3, 2]))
+console.log(minSuma([1, 10, 43, 900, 20, 8]))
+console.log(minSuma([2, 10, 43, 900, 20, 8]))
+console.log(minSuma([2,3,4,5,6,7])) */
