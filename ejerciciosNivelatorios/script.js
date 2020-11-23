@@ -10,7 +10,7 @@ sea par, mostrá en la consola “El número x es par”.
      for(let i=0; i<=100; i++){
          res = i + numero;
          if(!(res%2)){
-             console.log(`El número ${res} es par `)
+             console.log(`${i} : El número ${res} es par `)
          }
     }
  }
@@ -426,16 +426,19 @@ documento: 44444444
     let objeto2 ={}; 
     if(typeof(objeto) !== "object"){
         return (`error, input can´t be a ${typeof(objeto)}`)
+    }
+    else if(Array.isArray(objeto)){
+        return (`error, input can´t be an Array`)
     }else{
-        for(let i in objeto){
-            objeto2[objeto[i]] = i
+        for(let key in objeto){
+            objeto2[objeto[key]] = key
             //console.log(`${i} ${objeto[i]}`)
         }
     }
     //console.log(objeto2)
-    for(let a in objeto2){
-        console.log(`${a} : ${objeto2[a]}`)
-    }
+    // for(let a in objeto2){
+    //     console.log(`${a} : ${objeto2[a]}`)
+    // }
     return objeto2;
 } 
 let objeto = {
@@ -443,8 +446,7 @@ let objeto = {
     edad: 22,
     nacionalidad: "de otro planeta",
     documento: 44444444
-    }
-    
+    }    
 // reverseKeys(objeto);
 console.log(reverseKeys(objeto)) */
 
@@ -458,7 +460,7 @@ Ejemplo:
 - palindromo(“Enrique”) debe retornar false */
 /* 
 function palindrome(string) {
-    var mitad = Math.floor(string.length/2);
+    let mitad = Math.floor(string.length/2);
     for ( let i = 0; i < mitad; i++ ) {
         if (string[i] !== string[string.length - 1 - i]) {
             return false;
@@ -470,3 +472,41 @@ function palindrome(string) {
 console.log(palindrome("anilina"));
 console.log(palindrome("ana"));
 console.log(palindrome("Enrique")); */
+
+/* 18. Rotación de arreglo a la derecha
+Debes crear una función llamada “rotar” que reciba un arreglo y un número, y debera
+retornar un nuevo arreglo con los elementos rotados la cantidad de veces como sea el
+número a la derecha.
+Ejemplo:
+- rotar([1, 2, 3, 4, 5], 2) debe retornar [4, 5, 1, 2, 3]
+- rotar([1, 2, 3, 4, 5], 3) debe retornar [3, 4, 5, 1, 2] */
+
+/* function rotar(arreglo, numero){
+    let nuevoArreglo = [];
+    // for(let i=arreglo.length-1; i>=arreglo.length-numero;i--){
+    //     //arreglo.pop();
+    //     //arreglo.splice(arreglo[i],1)
+    // }
+    // return arreglo;
+    for(let i=0; i<=arreglo.length-numero;i++){
+        nuevoArreglo.push(arreglo.pop());
+        //arreglo.pop();
+        //arreglo.splice(arreglo[i],1)
+    }
+    return arreglo;
+    return nuevoArreglo;
+}
+ */
+function rotar(arreglo, numero){
+    let nuevoArreglo =[];
+    for(let i=arreglo.length-1; i>=arreglo.length-numero; i--){
+        nuevoArreglo.unshift(arreglo[i]);
+    }
+    return nuevoArreglo;
+    //for(let i=0; i<=length-numero; i++){
+            
+
+    //}
+}
+
+console.log(rotar([1,2,3,4,5],3));
