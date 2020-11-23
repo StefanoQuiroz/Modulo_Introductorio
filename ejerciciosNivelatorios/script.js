@@ -312,3 +312,45 @@ var arreglo = [ { name: “lucas”, edad: 20 }, { name: “santi”, edad: 22 }
 let arreglo = [ { name: "lucas", edad: 20 }, { name: "santi", edad: 22 } ]
 oneProperty(arreglo, "name");
 oneProperty(arreglo, "edad"); */
+
+/* 14. Guerra de palabras
+Utils:
+var abc =
+{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10,k:11,l:12,m:13,n:14,o:15,p:16,q:17,r:18,s:19,t:20,u:
+21,v:22,w:23,x:24,y:25,z:26}
+Debés crear una función llamada `warWords` que reciba dos palabras como parámetro
+y devuelva la ganadora según la suma del valor de sus letras (dado por su posición en
+el abecedario).
+Ejemplo:
+- warWord(“hola”, “chau”) debe retornar “hola” (36 > 33)
+- warWord(“love”, “friendship”) debe retornar “friendship”
+ */
+
+/* function warWords (palabra, palabra2){
+    let abc = {a : 1, b : 2, c : 3, d : 4, e : 5, f : 6, g : 7, h : 8, i : 9, j : 10, k : 11, l : 12, m : 13, n : 14, o : 15, p : 16, q : 17, r : 18, s : 19, t : 20, u : 21, v : 22, w : 23, x : 24, y : 25, z : 26}
+    let sumatoria1 = 0;
+    let sumatoria2 = 0;
+    for(let i=0; (i<palabra.length) || (i<palabra2.length); i++){
+        for(let j in abc){
+            if(palabra[i] === j){
+                sumatoria1+=abc[j];
+            }
+            else if(palabra2[i]===j){
+                sumatoria2+=abc[j];
+            }
+        }
+    }
+
+    if(sumatoria1 > sumatoria2){
+        console.log(`${palabra} (${sumatoria1} > ${sumatoria2})`);
+    }
+    else{
+        console.log(`${palabra2} (${sumatoria1} < ${sumatoria2})`);
+    }
+}
+
+warWords("hola", "chau");
+warWords("love", "friendship"); */
+
+
+
