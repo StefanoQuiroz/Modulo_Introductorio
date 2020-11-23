@@ -257,4 +257,58 @@ arregloDeObjetos(3);
  */
 
 
+/* 12. Arreglo de objetos
+Debés crear una función llamada `arregloDeObjetos` que reciba un número y una
+palabra como parámetro y devuelva un arreglo de objetos que tenga: una propiedad
+llamada como la palabra pasada por parámetro y el valor del número y sus anteriores.
+Ejemplo:
+- arregloDeObjetos(5, “hola”) debe retornar [{hola: 1}, {hola: 2}, {hola: 3}, {hola: 4},
+{hola: 5 }]
+- arregloDeObjetos(3, “chau”) debe retornar [{chau: 1}, {chau: 2}, {chau: 3}] */
 
+/* function arregloDeObjetos(numero, palabra){
+    let arreglo = [];
+    for(let i=1; i<= numero; i++){
+        let objeto = {};
+        objeto[palabra] = i;
+        arreglo.push(objeto);
+    }
+    //console.log(arreglo)
+
+    for(let j=0; j<arreglo.length; j++){
+        console.log(arreglo[j]);
+    }
+}
+
+arregloDeObjetos(5, "hola");
+console.log(" ");
+arregloDeObjetos(3, "chau"); */
+
+/* 13. Única propiedad
+Debés crear una función llamada `oneProperty` que reciba un arreglo de objetos como
+parámetro y un string. Deberá retornar un nuevo arreglo de objetos, teniendo como
+parámetro la propiedad que fue pasada como string.
+Ejemplo:
+var arreglo = [ { name: “lucas”, edad: 20 }, { name: “santi”, edad: 22 } ]
+- oneProperty(arreglo, “edad”) debe retornar [ { edad: 20 }, { edad: 22 } ]
+- oneProperty(arreglo, “name”) debe retornar [ { name: “lucas”}, { name: “santi” } ] */
+
+/* function oneProperty(arregloDeObjetos, string){
+    let arreglo= [];
+    for(let i=0; i<arregloDeObjetos.length; i++){
+        for(let j in arregloDeObjetos[i]){
+            let objeto={};
+            if(j===string){
+                objeto[j] =arregloDeObjetos[i][j];
+                arreglo.push(objeto);
+            }
+        }
+    }
+    for(let a=0; a<arreglo.length; a++){
+        console.log(arreglo[a])
+    }
+}
+
+let arreglo = [ { name: "lucas", edad: 20 }, { name: "santi", edad: 22 } ]
+oneProperty(arreglo, "name");
+oneProperty(arreglo, "edad"); */
