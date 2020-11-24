@@ -482,31 +482,27 @@ Ejemplo:
 - rotar([1, 2, 3, 4, 5], 3) debe retornar [3, 4, 5, 1, 2] */
 
 /* function rotar(arreglo, numero){
-    let nuevoArreglo = [];
-    // for(let i=arreglo.length-1; i>=arreglo.length-numero;i--){
-    //     //arreglo.pop();
-    //     //arreglo.splice(arreglo[i],1)
-    // }
-    // return arreglo;
-    for(let i=0; i<=arreglo.length-numero;i++){
-        nuevoArreglo.push(arreglo.pop());
-        //arreglo.pop();
-        //arreglo.splice(arreglo[i],1)
-    }
-    return arreglo;
-    return nuevoArreglo;
-}
- */
-function rotar(arreglo, numero){
     let nuevoArreglo =[];
     for(let i=arreglo.length-1; i>=arreglo.length-numero; i--){
         nuevoArreglo.unshift(arreglo[i]);
     }
-    return nuevoArreglo;
-    //for(let i=0; i<=length-numero; i++){
+    //return nuevoArreglo;
+    for(let i=0; i<arreglo.length-numero; i++){
+        nuevoArreglo.push(arreglo[i]); //
             
-
-    //}
+    }
+    return nuevoArreglo;
 }
 
-console.log(rotar([1,2,3,4,5],3));
+console.log(rotar([1,2,3,4,5],2)); */
+
+/* 19. Consecutivos similares
+Debes crear una función llamada “consecutivosSimilares” que reciba un string y retorne
+cuantos consecutivos similares hay en un string.
+Ejemplo:
+- consecutivosSimilares(“AAAA”) debe retornar 3
+- consecutivosSimilares(“BBBBB”) debe retornar 4
+- consecutivosSimilares(“ABABABAB”) debe retornar 0
+- consecutivosSimilares(“BABABA”) debe retornar 0
+- consecutivosSimilares(“AAABBB”) debe retornar 4 */
+
