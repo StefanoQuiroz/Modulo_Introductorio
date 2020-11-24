@@ -506,3 +506,22 @@ Ejemplo:
 - consecutivosSimilares(“BABABA”) debe retornar 0
 - consecutivosSimilares(“AAABBB”) debe retornar 4 */
 
+/* function consecutivosSimilares(string){
+    let res=0;
+    for(let i=1; i<string.length;i++){
+        if(string[i-1] === string[i]){
+            res+=1;
+        }
+    }
+    return res;
+}
+
+console.log(consecutivosSimilares("AAAA"));
+console.log(consecutivosSimilares("BBBBB"));
+console.log(consecutivosSimilares("ABABABAB"));
+console.log(consecutivosSimilares("BABABA"));
+console.log(consecutivosSimilares("AAABBB")); */
+
+////////////////////////////////////////////////////////////////
+//////////////////////////   FIN  //////////////////////////////
+////////////////////////////////////////////////////////////////
