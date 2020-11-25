@@ -119,7 +119,47 @@ Ejemplo:
 - moveZeros([false,1,0,1,2,0,1,3,"a"]) debe retornar [false,1,1,2,1,3,"a",0,0]
 - moveZeros([1,2,0,1,0,1,0,3,0,1]) debe retornar [1,2,1,1,3,1,0,0,0,0]
  */
+///////////////CON PUSH ///////////////////////
+/* function moveZeros (arreglo){
+    let nuevoArreglo = [];
+    let ceros=[];
+    for(let i=0; i<arreglo.length; i++){
+        if(arreglo[i] !==0){
+            nuevoArreglo.push(arreglo[i]);
+        } else{
+            ceros.push(arreglo[i]);
 
+        }
+    
+    }
+    //return [nuevoArreglo,ceros];
+    for(let i=0; i<ceros.length;i++){
+        nuevoArreglo.push(ceros[i])
+    }
+    return nuevoArreglo;
+    
+}
+moveZeros([1,2,0,1,0,1,0,3,0,1])
+moveZeros([false,1,0,1,2,0,1,3,"a"]) */
+
+////CREDITOS MAURO BRUNO/////////////////////////
+/* function moveZeros (arreglo){
+    let moverZeros = []
+    arreglo.forEach(function(x){
+    if(x!==0){
+        moverZeros.unshift(x)
+    }else{
+        moverZeros.push(x);
+        
+    }
+})
+    console.log(moverZeros.reverse())
+}
+
+moveZeros([1,2,0,1,0,1,0,3,0,1])
+moveZeros([false,1,0,1,2,0,1,3,"a"]) */
+//////////////////////////////////////////////////
+///CON SPLICE/////////////////////////////////////
 /* function moveZeros(arreglo){
     let nuevoArreglo = []
     for(let i=0; i<arreglo.length;i++){
@@ -175,6 +215,30 @@ Ejemplo:
 - mezclarArreglos([1,2,3,4],[“h”,”o”,”l”,”a”]) debe retornar [1, “h”, 2,”o”, 3,”l”,4,”a”]
 - mezclarArreglos([1,2,3,4], [“h”,”p”]) debe retornar [1, “h”, 2, “p”, 3 , 4]
 - mezclarArreglos([“h”,”p”], [1,2,3,4]) debe retornar [“h”, 1, “p”, 2, 3 , 4] */
+
+/////////SOLUCION A FUERZA BRUTA///////////////////////////////////
+/////////SUGERENCIAS !!! //////////////////////////////////////////
+/* function mezclarArreglos (arreglo1, arreglo2){
+    let nuevoArreglo = [];
+    for(let i=0; i<arreglo1.length || i<arreglo2.length; i++){
+        if(arreglo1[i] !== arreglo2[2]){
+            nuevoArreglo.push(arreglo1[i]);
+            nuevoArreglo.push(arreglo2[i]);
+        }
+    }
+    let pop = [];
+    for(let i=0; i<nuevoArreglo.length; i++){
+        if(typeof(nuevoArreglo[i]) !== "undefined"){
+            pop.push(nuevoArreglo[i])
+        }
+    }
+    return pop;
+}
+
+console.log(mezclarArreglos([1,2,3,4],["h","o","l","a"]));
+console.log(mezclarArreglos([1,2,3,4], ["h","p"]));
+console.log(mezclarArreglos(["h","p"], [1,2,3,4])); */
+
 
 /* 10. Mínima Suma
 Debés crear una función llamada `minSum` que reciba un arreglo de números
