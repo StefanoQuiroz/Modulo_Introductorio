@@ -5,7 +5,7 @@ En caso de que el número de la iteración sumado con el número pasado por par�
 sea par, mostrá en la consola “El número x es par”.
  */
 
-/*  function loopDePares (numero){
+ /* function loopDePares (numero){
      let res = 0;
      for(let i=0; i<=100; i++){
          res = i + numero;
@@ -52,7 +52,7 @@ Ejemplo:
     }
     return res;
 }
-let numero = 8
+let numero = 3
 console.log(`La sumatoria de ${numero} = ${sumattion(numero)}`); */
 
 /* 4. Nuevo Arreglo
@@ -139,8 +139,8 @@ Ejemplo:
     return nuevoArreglo;
     
 }
-moveZeros([1,2,0,1,0,1,0,3,0,1])
-moveZeros([false,1,0,1,2,0,1,3,"a"]) */
+console.log(moveZeros([1,2,0,1,0,1,0,3,0,1]))
+console.log(moveZeros([false,1,0,1,2,0,1,3,"a"])) */
 
 ////CREDITOS MAURO BRUNO/////////////////////////
 /* function moveZeros (arreglo){
@@ -165,17 +165,14 @@ moveZeros([false,1,0,1,2,0,1,3,"a"]) */
     for(let i=0; i<arreglo.length;i++){
         if(arreglo[i]===0){
             nuevoArreglo.push(arreglo[i])
-            arreglo.splice(arreglo.indexOf(arreglo[i]),1)
-            
-            //nuevoArreglo.push(arreglo[i])
-            //push(arreglo[i]);
+            //splice(inicio, cuantos elem a borrar)
+            arreglo.splice(i,1)
         }
     }
     for(let i=0; i< nuevoArreglo.length; i++){
         arreglo.push(nuevoArreglo[i]);
     }
     return arreglo;
-    
 }
 let arreglo = [1,2,0,1,0,1,0,3,0,1]
 let arreglo2= [false,1,0,1,2,0,1,3,"a"]
@@ -196,7 +193,7 @@ Soy 4 y yo soy a
 
 /* function arrayHandler(arreglo1, arreglo2){
     if(arreglo1.length === arreglo2.length){
-        for (let i=0; i<arreglo1.length;i++){
+        for (let i=0; i<arreglo1.length ||i<arreglo2.length;i++){
             console.log(`Soy ${arreglo1[i]} y yo soy ${arreglo2[i]}`)
         }
     }
@@ -204,9 +201,9 @@ Soy 4 y yo soy a
         alert(`${arreglo1} no es del mismo tamanio de ${arreglo2}`)
     }
 }
-arrayHandler([1,2,3,4], ["h","o","l","a"]);
+arrayHandler([1,2,3,4], ["h","o","l","a"]); */
 //Prueba diferentes tamanios arreglo1 y arreglo2, alert
-//arrayHandler([1,2,3,4], ["h","o","l"]); */
+//arrayHandler([1,2,3,4], ["h","o","l"]);
 
 /* 9. Mezclando arreglos I
 Debés crear una función llamada `mezclarArreglos` que reciba dos arreglos como
@@ -216,12 +213,10 @@ Ejemplo:
 - mezclarArreglos([1,2,3,4], [“h”,”p”]) debe retornar [1, “h”, 2, “p”, 3 , 4]
 - mezclarArreglos([“h”,”p”], [1,2,3,4]) debe retornar [“h”, 1, “p”, 2, 3 , 4] */
 
-/////////SOLUCION A FUERZA BRUTA///////////////////////////////////
-/////////SUGERENCIAS !!! //////////////////////////////////////////
 /* function mezclarArreglos (arreglo1, arreglo2){
     let nuevoArreglo = [];
     for(let i=0; i<arreglo1.length || i<arreglo2.length; i++){
-        if(arreglo1[i] !== arreglo2[2]){
+        if(arreglo1[i] !== arreglo2[i]){
             nuevoArreglo.push(arreglo1[i]);
             nuevoArreglo.push(arreglo2[i]);
         }
@@ -250,10 +245,7 @@ Ejemplo:
 /* function minSum(arreglo){
     //dar valores altos al azar a min y min2
     let min = 1000
-    //arreglo[0];
-    let nuevoArreglo = [];
     let min2 = 1000
-    //arreglo[0];
     for(let i=0; i<arreglo.length; i++){
         if(min > arreglo[i]){
             min=arreglo[i];
@@ -311,14 +303,14 @@ Ejemplo:
         objeto["valor"] = i
         arreglo.push(objeto);
     }
-    for(let j=0; j<arreglo.length; j++){
-        console.log(arreglo[j]);
-     }
+    return arreglo
+    // for(let j=0; j<arreglo.length; j++){
+    //     console.log(arreglo[j]);
+    //  }
 }
-arregloDeObjetos(5);
-console.log(" ")
-arregloDeObjetos(3);
- */
+console.log(arregloDeObjetos(5));
+// console.log(" ")
+// arregloDeObjetos(3); */
 
 
 /* 12. Arreglo de objetos
@@ -337,16 +329,11 @@ Ejemplo:
         objeto[palabra] = i;
         arreglo.push(objeto);
     }
-    //console.log(arreglo)
-
-    for(let j=0; j<arreglo.length; j++){
-        console.log(arreglo[j]);
-    }
+    return arreglo;
 }
 
-arregloDeObjetos(5, "hola");
-console.log(" ");
-arregloDeObjetos(3, "chau"); */
+console.log(arregloDeObjetos(5, "hola"));
+console.log(arregloDeObjetos(3, "chau")); */
 
 /* 13. Única propiedad
 Debés crear una función llamada `oneProperty` que reciba un arreglo de objetos como
@@ -368,19 +355,19 @@ var arreglo = [ { name: “lucas”, edad: 20 }, { name: “santi”, edad: 22 }
             }
         }
     }
-    for(let a=0; a<arreglo.length; a++){
-        console.log(arreglo[a])
-    }
+    return arreglo;
+    // for(let a=0; a<arreglo.length; a++){
+    //     console.log(arreglo[a])
+    // }
 }
 
 let arreglo = [ { name: "lucas", edad: 20 }, { name: "santi", edad: 22 } ]
-oneProperty(arreglo, "name");
-oneProperty(arreglo, "edad"); */
+console.log(oneProperty(arreglo, "name"));
+console.log(oneProperty(arreglo, "edad")); */
 
 /* 14. Guerra de palabras
 Utils:
-var abc =
-{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10,k:11,l:12,m:13,n:14,o:15,p:16,q:17,r:18,s:19,t:20,u:
+var abc = {a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10,k:11,l:12,m:13,n:14,o:15,p:16,q:17,r:18,s:19,t:20,u:
 21,v:22,w:23,x:24,y:25,z:26}
 Debés crear una función llamada `warWords` que reciba dos palabras como parámetro
 y devuelva la ganadora según la suma del valor de sus letras (dado por su posición en
@@ -522,9 +509,10 @@ Ejemplo:
 - palindromo(“anilina ”) debe retornar true
 - palindromo(“Ana ”) debe retornar true
 - palindromo(“Enrique”) debe retornar false */
-/* 
-function palindrome(string) {
-    let mitad = Math.floor(string.length/2);
+
+/* function palindromo(pal) {
+    let string = pal.toLowerCase()
+    let mitad = Math.floor(pal.length/2);
     for ( let i = 0; i < mitad; i++ ) {
         if (string[i] !== string[string.length - 1 - i]) {
             return false;
@@ -533,9 +521,9 @@ function palindrome(string) {
     return true;
 }
 
-console.log(palindrome("anilina"));
-console.log(palindrome("ana"));
-console.log(palindrome("Enrique")); */
+console.log(palindromo("anilina"));
+console.log(palindromo("ana"));
+console.log(palindromo("enrique")); */
 
 /* 18. Rotación de arreglo a la derecha
 Debes crear una función llamada “rotar” que reciba un arreglo y un número, y debera
